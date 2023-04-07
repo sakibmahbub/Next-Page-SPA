@@ -31,7 +31,27 @@ const BookDetails = () => {
           <p className=" text-gray-900">Publisher: {publisher}</p>
           <p className=" text-gray-900">Year: {year}</p>
           <p className="mb-5 text-gray-900">Rating: {rating}</p>
-         
+          {fold ? (
+            <>
+              <p className="mb-5 text-gray-500">{desc.substring(0, 100)}...</p>
+              <span
+                className="cursor-pointer text-blue-600"
+                onClick={() => setFold(!fold)}
+              >
+                Read More
+              </span>
+            </>
+          ) : (
+            <>
+              <p className="mb-5 text-gray-900">{desc}...</p>
+              <span
+                className="cursor-pointer text-blue-600"
+                onClick={() => setFold(!fold)}
+              >
+                Read Less
+              </span>
+            </>
+          )}
 
           <div className="flex gap-5 mt-8 items-center">
             <a href={url} target="_blank" className="btn">
