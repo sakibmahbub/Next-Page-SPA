@@ -13,7 +13,7 @@ const Header = () => {
       <div className="relative flex items-center justify-between">
         {/* Logo Section */}
         <Link to="/" className="inline-flex items-center">
-          <BoltIcon className="h-6 w-6 text-blue-500" />
+          <BoltIcon className="h-6 w-6 active" />
           <span className="ml-2 text-xl font-bold tracking-wide text-gray-800">
             nextPage
           </span>
@@ -25,7 +25,7 @@ const Header = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "text-blue-500" : "default"
+                isActive ? "active" : "default"
               }
             >
               Home
@@ -35,7 +35,7 @@ const Header = () => {
             <NavLink
               to="/books"
               className={({ isActive }) =>
-                isActive ? "text-blue-500" : "default"
+                isActive ? "active" : "default"
               }
             >
               Books
@@ -45,7 +45,7 @@ const Header = () => {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive ? "text-blue-500" : "default"
+                isActive ? "active" : "default"
               }
             >
               About us
@@ -69,7 +69,7 @@ const Header = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <Link to="/" className="inline-flex items-center">
-                      <BoltIcon className="h-6 w-6 text-blue-500" />
+                      <BoltIcon className="h-6 w-6 active" />
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
                         nextPage
                       </span>
